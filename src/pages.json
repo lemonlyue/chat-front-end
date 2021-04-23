@@ -1,12 +1,61 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
-			"path": "pages/index/index",
+			"path": "pages/square/index",
 			"style": {
-				"navigationBarTitleText": "uni-app"
+				"enablePullDownRefresh": true,
+				"transparentTitle": "always"
+			}
+		}, {
+			"path": "pages/planet/index",
+			"style": {
+				"transparentTitle": "always"
+			}
+		}, {
+			"path": "pages/chat/index",
+			"style": {
+				"transparentTitle": "always"
+			}
+		}, {
+			"path": "pages/my/index",
+			"style": {
+				"transparentTitle": "always"
 			}
 		}
 	],
+	"tabBar": {
+		"color": "#bfbfbf",
+		"selectedColor": "#10cfb0",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"midButton": {
+			"iconPath": "static/bottom/publish.png",
+			"width": "60px",
+			"height": "60px",
+			"iconWidth": "50px"
+		},
+		"list": [{
+			"pagePath": "pages/planet/index",
+			"iconPath": "static/bottom/planet.png",
+			"selectedIconPath": "static/bottom/planetSelected.png",
+			"text": "星球"
+		}, {
+			"pagePath": "pages/square/index",
+			"iconPath": "static/bottom/square.png",
+			"selectedIconPath": "static/bottom/squareSelected.png",
+			"text": "广场"
+		}, {
+			"pagePath": "pages/chat/index",
+			"iconPath": "static/bottom/chat.png",
+			"selectedIconPath": "static/bottom/chatSelected.png",
+			"text": "聊天"
+		}, {
+			"pagePath": "pages/my/index",
+			"iconPath": "static/bottom/my.png",
+			"selectedIconPath": "static/bottom/mySelected.png",
+			"text": "自己"
+		}]
+	},
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",

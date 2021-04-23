@@ -1,24 +1,25 @@
 <template>
-	<view class="content">
-		<!-- <image class="logo" src="/static/logo.png"></image> -->
-		<!-- <view>
-			<text class="title">{{title}}</text>
-		</view> -->
-	</view>
+	<wuc-tab :tab-list="tabList" :tabCur.sync="TabCur" @change="tabChange"></wuc-tab>
 </template>
 
 <script>
+	import WucTab from '/components/wuc-tab/wuc-tab.vue';
+
 	export default {
 		data() {
 			return {
-				title: 'Hello Uniapp'
-			}
-		},
-		onLoad() {
-
-		},
+			TabCur: 0,
+			tabList: [{
+				name: '广场'
+			}, {
+				name: '推荐'
+			}],
+		}},
+		components: { WucTab },
 		methods: {
-
+			tabChange(index) {
+				this.TabCur = index;
+			}
 		}
 	}
 </script>

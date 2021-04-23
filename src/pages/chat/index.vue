@@ -1,17 +1,27 @@
 <template>
 	<view class="content">
 		<!-- <image class="logo" src="/static/logo.png"></image> -->
-		<!-- <view>
+		<view>
 			<text class="title">{{title}}</text>
-		</view> -->
+		</view>
+		<uni-badge text="1"></uni-badge>
+<uni-badge text="2" type="success" @click="bindClick"></uni-badge>
+<uni-badge text="3" type="primary" :inverted="true"></uni-badge>
+<uni-nav-bar left-icon="back" left-text="返回" right-text="菜单" title="导航栏组件"></uni-nav-bar>
 	</view>
 </template>
 
 <script>
+	import {uniBadge} from '@dcloudio/uni-ui'
+	import {uniNavBar} from '@dcloudio/uni-ui'
 	export default {
+		components: {
+			uniBadge,
+			uniNavBar
+		},
 		data() {
 			return {
-				title: 'Hello Uniapp'
+				title: '聊天列表'
 			}
 		},
 		onLoad() {
